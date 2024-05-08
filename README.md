@@ -1,40 +1,49 @@
-# Monitor de Calidad del Aire en el Hogar
+# Sistema de Riego Automatizado para Plantas
 
-Este proyecto consiste en crear un dispositivo básico que monitorea la calidad del aire en el hogar y proporciona retroalimentación sobre los niveles de contaminantes comunes. Utiliza un sensor de calidad del aire para detectar una variedad de gases, y un microcontrolador para recopilar datos y enviarlos a una plataforma de visualización en línea.
+Este proyecto consiste en la creación de un sistema de riego automatizado para plantas que puede ser controlado y monitoreado a través de un dispositivo móvil. El sistema utiliza un microcontrolador, sensores de humedad del suelo y una bomba de agua o válvula solenoide para proporcionar riego según las necesidades de las plantas.
 
-## Componentes
+## Componentes Necesarios
 
-- **Sensor de Calidad del Aire:** Utiliza un sensor MQ-135 o similar para detectar gases comunes como CO2, monóxido de carbono, amoníaco, entre otros.
-- **Microcontrolador:** Utiliza un Arduino o Raspberry Pi para recopilar datos del sensor y enviarlos a una plataforma de visualización.
-- **Visualización en Línea:** Utiliza una plataforma en línea o una aplicación móvil para visualizar los datos de calidad del aire.
-- **Fuente de Alimentación:** Proporciona energía al dispositivo a través de una fuente de alimentación USB o una batería recargable.
+- Microcontrolador (Arduino o Raspberry Pi)
+- Sensores de humedad del suelo
+- Bomba de agua o válvula solenoide
+- Módulo de comunicación (WiFi o Bluetooth)
+- Componentes electrónicos adicionales (resistencias, cables, etc.)
 
-## Funcionamiento
+## Instrucciones de Ensamblaje
 
-1. Conecta el sensor de calidad del aire al microcontrolador según las instrucciones del fabricante.
-2. Programa el microcontrolador para leer los datos del sensor a intervalos regulares.
-3. Configura el microcontrolador para enviar los datos recopilados a una plataforma en línea o una aplicación móvil a través de Wi-Fi o Bluetooth.
-4. Utiliza la plataforma en línea o la aplicación móvil para visualizar los datos de calidad del aire en tiempo real y recibir notificaciones en caso de que los niveles de contaminantes excedan ciertos umbrales.
+1. Conecta los sensores de humedad del suelo al microcontrolador.
+2. Conecta la bomba de agua o válvula solenoide al microcontrolador.
+3. Asegúrate de que todos los componentes estén correctamente conectados y alimentados.
 
-## Beneficios
+## Instrucciones de Programación
 
-- Conciencia Ambiental: Ayuda a los usuarios a comprender mejor la calidad del aire en su hogar y tomar medidas para mejorarla.
-- Aprendizaje Práctico: Proporciona una experiencia práctica en la integración de sensores y microcontroladores para proyectos de IoT.
-- Personalización: Los usuarios pueden ajustar el proyecto según sus necesidades y preferencias, como agregar alarmas o análisis de tendencias.
+1. Utiliza el software de programación adecuado para programar el microcontrolador (por ejemplo, Arduino IDE).
+2. Escribe el código necesario para leer los datos del sensor de humedad del suelo y controlar la bomba de agua o válvula solenoide.
+3. Implementa la lógica necesaria para establecer la conexión con el módulo de comunicación.
 
-## Desafíos
+## Desarrollo de la Aplicación Móvil
 
-- Conexión a Internet: Requiere configurar una conexión a Internet para enviar datos del dispositivo a una plataforma en línea o una aplicación móvil.
-- Programación del Microcontrolador: Es necesario tener conocimientos básicos de programación para configurar el microcontrolador y enviar los datos del sensor a la plataforma de visualización.
+1. Utiliza un entorno de desarrollo de aplicaciones móviles para crear una aplicación que se pueda instalar en tu dispositivo móvil.
+2. Diseña la interfaz de usuario de la aplicación para monitorear el estado de las plantas y controlar el riego.
+3. Implementa la funcionalidad para establecer la conexión con el sistema de riego y enviar comandos de control.
+
+## Pruebas y Ajustes
+
+1. Realiza pruebas exhaustivas del sistema para asegurarte de su correcto funcionamiento.
+2. Ajusta los parámetros de riego y la lógica de control según sea necesario.
+3. Realiza pruebas de conectividad para garantizar una comunicación confiable entre el sistema y la aplicación móvil.
+
+## Implementación y Uso
+
+1. Implementa el sistema de riego automatizado en tu jardín o área de cultivo.
+2. Instala la aplicación móvil en tu dispositivo y úsala para monitorear y controlar el riego de tus plantas de forma remota.
+3. Disfruta de un sistema de riego automatizado que te ayudará a mantener tus plantas sanas y felices con el mínimo esfuerzo.
 
 ## Contribución
 
-Siéntete libre de contribuir a este proyecto mejorando la documentación, agregando nuevas características o resolviendo problemas. Para contribuir, sigue estos pasos:
+¡Siéntete libre de contribuir al proyecto! Puedes abrir issues para reportar problemas o sugerir nuevas características, o enviar pull requests con mejoras al código existente.
 
-1. Haz un fork del repositorio.
-2. Crea una nueva rama con tus cambios: `git checkout -b mi-nueva-caracteristica`
-3. Realiza tus cambios y haz commit: `git commit -am 'Agrega una nueva característica'`
-4. Sube tus cambios a tu repositorio: `git push origin mi-nueva-caracteristica`
-5. Haz un pull request a este repositorio.
+## Licencia
 
-¡Gracias por contribuir!
+Este proyecto está licenciado bajo la [Licencia MIT](LICENSE).
