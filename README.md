@@ -1,48 +1,35 @@
 # Sistema de Riego Automatizado para Plantas
 
-Este proyecto consiste en la creación de un sistema de riego automatizado para plantas que puede ser controlado y monitoreado a través de un dispositivo móvil. El sistema utiliza un microcontrolador, sensores de humedad del suelo y una bomba de agua o válvula solenoide para proporcionar riego según las necesidades de las plantas.
+Este proyecto implementa un sistema de riego automatizado para plantas que puede ser controlado y monitoreado a través de un dispositivo móvil. El sistema utiliza un microcontrolador Arduino, sensores de humedad del suelo y una bomba de agua para proporcionar riego según las necesidades de las plantas.
 
-## Componentes Necesarios
+## Características
 
-- Microcontrolador (Arduino o Raspberry Pi)
-- Sensores de humedad del suelo
-- Bomba de agua o válvula solenoide
-- Módulo de comunicación (WiFi o Bluetooth)
-- Componentes electrónicos adicionales (resistencias, cables, etc.)
+- Control remoto del riego desde una aplicación móvil.
+- Monitoreo en tiempo real del nivel de humedad del suelo.
+- Ajuste automático del riego basado en las condiciones del suelo.
+- Notificaciones en la aplicación móvil sobre el estado del sistema y las condiciones de las plantas.
 
-## Instrucciones de Ensamblaje
+## Tecnologías Utilizadas
 
-1. Conecta los sensores de humedad del suelo al microcontrolador.
-2. Conecta la bomba de agua o válvula solenoide al microcontrolador.
-3. Asegúrate de que todos los componentes estén correctamente conectados y alimentados.
+- Arduino Uno
+- Sensores de Humedad del Suelo (Modelo XY-18)
+- Bomba de Agua (Modelo DC 3-6V)
+- Módulo WiFi ESP8266
+- Aplicación móvil desarrollada en Flutter
 
-## Instrucciones de Programación
+## Instalación y Uso
 
-1. Utiliza el software de programación adecuado para programar el microcontrolador (por ejemplo, Arduino IDE).
-2. Escribe el código necesario para leer los datos del sensor de humedad del suelo y controlar la bomba de agua o válvula solenoide.
-3. Implementa la lógica necesaria para establecer la conexión con el módulo de comunicación.
-
-## Desarrollo de la Aplicación Móvil
-
-1. Utiliza un entorno de desarrollo de aplicaciones móviles para crear una aplicación que se pueda instalar en tu dispositivo móvil.
-2. Diseña la interfaz de usuario de la aplicación para monitorear el estado de las plantas y controlar el riego.
-3. Implementa la funcionalidad para establecer la conexión con el sistema de riego y enviar comandos de control.
-
-## Pruebas y Ajustes
-
-1. Realiza pruebas exhaustivas del sistema para asegurarte de su correcto funcionamiento.
-2. Ajusta los parámetros de riego y la lógica de control según sea necesario.
-3. Realiza pruebas de conectividad para garantizar una comunicación confiable entre el sistema y la aplicación móvil.
-
-## Implementación y Uso
-
-1. Implementa el sistema de riego automatizado en tu jardín o área de cultivo.
-2. Instala la aplicación móvil en tu dispositivo y úsala para monitorear y controlar el riego de tus plantas de forma remota.
-3. Disfruta de un sistema de riego automatizado que te ayudará a mantener tus plantas sanas y felices con el mínimo esfuerzo.
+1. Clona este repositorio en tu máquina local.
+2. Conecta los componentes electrónicos según las instrucciones de montaje.
+3. Abre el proyecto de la aplicación móvil en tu IDE preferido.
+4. Instala las dependencias del proyecto de la aplicación móvil.
+5. Compila y ejecuta la aplicación móvil en tu dispositivo.
+6. Abre la aplicación móvil y sigue las instrucciones para configurar la conexión con el sistema de riego.
+7. Una vez configurado, podrás controlar y monitorear el sistema de riego desde tu dispositivo móvil.
 
 ## Contribución
 
-¡Siéntete libre de contribuir al proyecto! Puedes abrir issues para reportar problemas o sugerir nuevas características, o enviar pull requests con mejoras al código existente.
+¡Las contribuciones son bienvenidas! Si deseas contribuir a este proyecto, puedes abrir un problema para reportar errores o sugerir nuevas características, o enviar una solicitud de extracción con tus mejoras.
 
 ## Licencia
 
