@@ -1,72 +1,19 @@
-void Consola_04_pages_table(memory *memory){
-    int x = 0, y = 2, color_bars, gray_bars, color, id_actual, status_actual;
-    char tecla;
-
-    system("cls");
-    cout<<" -- Tabla de paginas --";
-    for(int i = 0; i<44; i++){
-        gotoxy(x, y); cout<<"["<<i<<"][";
-
-        color_bars = memory->frames[i].getUsed_space();
-        gray_bars = (5 - color_bars);
-        color = select_color(memory->frames[i].getProcess_staus());
-        status_actual = memory->frames[i].getProcess_staus();
-        id_actual = memory->frames[i].getProcessid();
-
-        for(int j = 0; j < color_bars; j++){
-           SetTextColor(color); cout<<"|";
-        }
-        for(int j = 0; j < gray_bars; j++){
-           SetTextColor(GRAY); cout<<"|";
-        }
-
-        if(id_actual > 0){
-            SetTextColor(WHITE); cout<<"<- ID: "<<id_actual<<" ";
-            ShowOnlyStatus(status_actual);
-        }
-        else if(id_actual == 0){
-            SetTextColor(GRAY); cout<<"<- Disponible";
-        }
-        else{
-            SetTextColor(LIGHT_RED); cout<<"<- SO";
-        }
-
-        SetTextColor(WHITE);
-        cout<<"\n";
-
-        y = y + 2;
-        if((i + 1) % 10 == 0 && i != 0){
-            x = x + 30;
-            y = 2;
-        }
-    }
-
-    display_frame_bar(memory);
-
-    gotoxy(1, 30); SetTextColor(4); cout<<" Presione C para continuar... "<<endl; SetTextColor(7);
-    while(tecla !='c' && tecla != 'C'){
-        kbhit();
-        tecla = getch();
-    }
-}
-
-void display_frame_bar(memory *memory){
-    int pos_bar_x = 3, color_index = 0, colors[11] = {BLUE, LIGHT_BLUE, AQUA, LIGHT_AQUA, LIGHT_GREEN, GREEN, YELLOW, LIGHT_YELLOW, LIGHT_RED, RED, PINK};
-
-    gotoxy(16, 25); cout<<"frames usados: "<<memory->getUsed_frames() <<" / "<<memory->getTotal_frames();
-    //gotoxy(63, 25); cout<<"frames libres: "<<memory->getAvalible_frames() <<"/ "<<memory->getTotal_frames();
-    gotoxy(2, 26);cout<<"[";
-
-    for(int i = 0; i < memory->getUsed_frames(); i++){
-        SetTextColor(colors[color_index]); gotoxy(pos_bar_x, 26); cout<<"|";
-        pos_bar_x++;
-        if((i + 1) % 4 == 0 && i != 0){
-            color_index++;
-        }
-    }
-    for(int i = 0; i < memory->getAvalible_frames(); i++){
-        SetTextColor(GRAY); gotoxy(pos_bar_x, 26); cout<<"|";
-        pos_bar_x++;
-    }
-    SetTextColor(WHITE); gotoxy(pos_bar_x, 26);cout<<"]";
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Riego Automatizado</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Riego Automatizado</h1>
+        <div class="data">
+            <p>Nivel de Humedad del Suelo: <span id="moistureLevel">0</span></p>
+            <button onclick="fetchData()">Actualizar Datos</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
