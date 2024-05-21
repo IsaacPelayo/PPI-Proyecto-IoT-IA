@@ -29,11 +29,3 @@ Este proyecto implementa un sistema de riego automatizado para plantas que puede
 ## Pagina web
 ![image](https://github.com/IsaacPelayo/PPI-Proyecto-IoT-IA/assets/118319408/8192285d-83cf-49e4-bc26-9761d9c986ea)
 
-
-## Contribución
-
-¡Las contribuciones son bienvenidas! Si deseas contribuir a este proyecto, puedes abrir un problema para reportar errores o sugerir nuevas características, o enviar una solicitud de extracción con tus mejoras.
-
-## Licencia
-
-Este proyecto está licenciado bajo la [Licencia MIT](LICENSE).
