@@ -1,6 +1,6 @@
 # Sistema de Riego Automatizado para Plantas
 
-Este proyecto implementa un sistema de riego automatizado para plantas que puede ser controlado y monitoreado a través de un dispositivo móvil. El sistema utiliza un microcontrolador Arduino, sensores de humedad del suelo y una bomba de agua para proporcionar riego según las necesidades de las plantas.
+Este proyecto utiliza sensores de humedad del suelo y un algoritmo de inteligencia artificial para optimizar el riego de plantas. El sistema está compuesto por un microcontrolador Arduino, una base de datos SQLite y una interfaz web.
 
 ## Características
 
