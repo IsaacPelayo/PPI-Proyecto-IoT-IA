@@ -9,13 +9,12 @@ Este proyecto implementa un sistema de riego automatizado para plantas que puede
 - Ajuste automático del riego basado en las condiciones del suelo.
 - Notificaciones en la aplicación móvil sobre el estado del sistema y las condiciones de las plantas.
 
-## Tecnologías Utilizadas
+## Materiales necesarios
 
 - Arduino Uno
 - Sensores de Humedad del Suelo (Modelo XY-18)
 - Bomba de Agua (Modelo DC 3-6V)
 - Módulo WiFi ESP8266
-- Aplicación móvil desarrollada en Flutter
 
 ## Instalación y Uso
 
