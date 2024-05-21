@@ -26,6 +26,10 @@ Este proyecto implementa un sistema de riego automatizado para plantas que puede
 6. Abre la aplicación móvil y sigue las instrucciones para configurar la conexión con el sistema de riego.
 7. Una vez configurado, podrás controlar y monitorear el sistema de riego desde tu dispositivo móvil.
 
+## Pagina web
+![image](https://github.com/IsaacPelayo/PPI-Proyecto-IoT-IA/assets/118319408/8192285d-83cf-49e4-bc26-9761d9c986ea)
+
+
 ## Contribución
 
 ¡Las contribuciones son bienvenidas! Si deseas contribuir a este proyecto, puedes abrir un problema para reportar errores o sugerir nuevas características, o enviar una solicitud de extracción con tus mejoras.
