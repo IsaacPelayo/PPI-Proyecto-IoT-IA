@@ -1,9 +1,9 @@
 #include <WiFi.h>
 
 const char* ssid = "Nombre_de_tu_Red_WiFi";
-const char* password = "Contrase√±a_de_tu_Red_WiFi";
+const char* password = "ContraseÒa_de_tu_Red_WiFi";
 
-const int bombaPin = D1; // Pin donde est√° conectada la bomba de agua
+const int bombaPin = D1; // Pin donde est· conectada la bomba de agua
 
 WiFiServer server(80);
 
