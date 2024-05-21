@@ -1,24 +1,38 @@
 #include <WiFi.h>
 
 const char* ssid = "Nombre_de_tu_Red_WiFi";
-const char* password = "Contraseña_de_tu_Red_WiFi";
+const char* password = "ContraseÃ±a_de_tu_Red_WiFi";
 
-const char* host = "192.168.1.100"; // Dirección IP de tu dispositivo móvil
-const int port = 80; // Puerto para la comunicación
+const int bombaPin = D1; // Pin donde estÃ¡ conectada la bomba de agua
+
+WiFiServer server(80);
 
 void setup() {
   Serial.begin(115200);
+  pinMode(bombaPin, OUTPUT);
+  digitalWrite(bombaPin, LOW);
   connectToWiFi();
+  server.begin();
 }
 
 void loop() {
-  // Leer datos del sensor de humedad del suelo
-  int moistureLevel = analogRead(A0);
-  
-  // Enviar datos al servidor (dispositivo móvil)
-  sendDataToServer(moistureLevel);
-  
-  delay(1000); // Espera 1 segundo antes de volver a leer el sensor
+  WiFiClient client = server.available();
+  if (client) {
+    String request = client.readStringUntil('\r');
+    client.flush();
+    
+    if (request.indexOf("/activar_riego") != -1) {
+      digitalWrite(bombaPin, HIGH);
+    }
+    if (request.indexOf("/desactivar_riego") != -1) {
+      digitalWrite(bombaPin, LOW);
+    }
+    
+    client.println("HTTP/1.1 200 OK");
+    client.println("Content-Type: text/html");
+    client.println("");
+    client.stop();
+  }
 }
 
 void connectToWiFi() {
@@ -31,22 +45,4 @@ void connectToWiFi() {
   Serial.println("Connected to WiFi");
 }
 
-void sendDataToServer(int data) {
-  WiFiClient client;
-  if (!client.connect(host, port)) {
-    Serial.println("Connection failed");
-    return;
-  }
-
-  Serial.println("Connected to server");
-
-  // Envía los datos al servidor
-  client.print("GET /data=");
-  client.print(data);
-  client.println(" HTTP/1.1");
-  client.print("Host: ");
-  client.println(host);
-  client.println("Connection: close");
-  client.println();
-}
 
