@@ -16,6 +16,12 @@ Este proyecto utiliza sensores de humedad del suelo y un algoritmo de inteligenc
 - Bomba de Agua (Modelo DC 3-6V)
 - Módulo WiFi ESP8266
 
+## Tecnologias utilizadas
+- Python (pandas)
+- C++
+- SQL
+- Html y css
+
 ## Instalación y Uso
 
 1. Clona este repositorio en tu máquina local.
