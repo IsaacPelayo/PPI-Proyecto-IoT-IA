@@ -8,3 +8,4 @@ function fetchData() {
             console.error('Error fetching data:', error);
         });
 }
+
